@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# enter specification for creating instance
+read -p "Enter AMI id : " ami
+read -p "Enter Number of instances : " count
+read -p "Enter instance type : " type
+read -p "Enter key pem file filename(without .pem file extension.) " key
+read -p "Enter Security Group id" sg
+# call the aws cli for creating ec2 instances
+aws ec2 run-instances --image-id "$ami" \
+--count "$count" --instance-type "$type" \
+--key-name "$key" --security-group-ids "$sg" \
+--user-data file://LAMPscript.txt
