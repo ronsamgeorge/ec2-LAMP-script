@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# file is in txt format as mentioned in AWS Documentation
 # no need to use sudo as script passed at creation is run using root priviledges 
 
 
