@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# file is in txt format as mentioned in AWS Documentation
+# no need to use sudo as script passed at creation is run using root priviledges 
+
+
+# update and refresh packages
+$(apt-get update -y)
+
+# install LAMP SERVER 
+$(apt-get install lamp-server^ -y)
+
+
